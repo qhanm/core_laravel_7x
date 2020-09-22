@@ -17,9 +17,12 @@
     <link href="{{ asset('themes/skote/assets/css/bootstrap.min.css') }}" id="bootstrap-style" rel="stylesheet" type="text/css">
     <!-- Icons Css -->
     <link href="{{ asset('themes/skote/assets/css/icons.min.css') }}" rel="stylesheet" type="text/css">
+    <link href="{{ asset('themes/skote/assets/libs/summernote/summernote-bs4.min.css') }}" rel="stylesheet" type="text/css">
+    @yield('styles')
+
     <!-- App Css-->
     <link href="{{ asset('themes/skote/assets/css/app.min.css') }}" id="app-style" rel="stylesheet" type="text/css">
-    @yield('styles')
+
 </head>
 
 <body data-sidebar="dark">
@@ -61,6 +64,17 @@
 <script src="{{ asset('themes/skote/assets/libs/simplebar/simplebar.min.js') }}"></script>
 <script src="{{ asset('themes/skote/assets/libs/node-waves/waves.min.js') }}"></script>
 @yield('scripts')
+
+<script src="{{ asset('themes/skote/assets/libs/summernote/summernote-bs4.min.js') }}"></script>
+<script src="{{ asset('themes/skote/assets/js/pages/form-editor.init.js') }}"></script>
+<script src="{{ asset('themes/skote/assets/libs/select2/js/select2.min.js') }}"></script>
+<script src="{{ asset('themes/skote/assets/libs/bootstrap-colorpicker/js/bootstrap-colorpicker.min.js') }}"></script>
+<script src="{{ asset('themes/skote/assets/libs/bootstrap-timepicker/js/bootstrap-timepicker.min.js') }}"></script>
+<script src="{{ asset('themes/skote/assets/libs/bootstrap-touchspin/jquery.bootstrap-touchspin.min.js') }}"></script>
+<script src="{{ asset('themes/skote/assets/libs/bootstrap-maxlength/bootstrap-maxlength.min.js') }}"></script>
+<script src="{{ asset('themes/skote/assets/libs/@chenfengyuan/datepicker/datepicker.min.js') }}"></script>
+
+<script src="{{ asset('themes/skote/assets/js/pages/form-advanced.init.js') }}"></script>
 
 <script src="{{ asset('themes/skote/assets/js/app.js') }}"></script>
 <script src="{{ asset('assets/backend/js/app.js') }}"></script>

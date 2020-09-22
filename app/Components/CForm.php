@@ -13,8 +13,9 @@ class CForm extends Form
     const INPUT_CHECKBOX = 'checkbox';
 
     const SELECT = 'select';
-    const SELECT2 = 'select';
-    const SELECT_MUlTI = 'select';
+    const INPUT_DATE = 'date';
+    const BUTTON  = 'button';
+
     public function __construct()
     {
 
@@ -94,4 +95,35 @@ class CForm extends Form
 
         return $this->add($name, self::SELECT, $options, $modify);
     }
+
+    public function addMultiSelect(string $name, array $options = [], $modify = false)
+    {
+        $options['attr'] = [
+            'class' => 'form-control select2 select2-multiple q-form-control',
+            'multiple' => 'multiple'
+        ];
+
+        return $this->add($name, self::SELECT, $options, $modify);
+    }
+
+    public function addDateTime(string $name, array $options = [], $modify = false)
+    {
+        //$options = [
+        //    'dt_format' => 'Y-m-d'
+        //];
+        return $this->add($name, self::INPUT_DATE, $options, $modify);
+    }
+
+    public function addButton(string $name, string $className = '', string $type = 'button', $modify = false)
+    {
+        $_option = [
+            'attr' => [
+                'class' => 'btn ' . $className
+            ],
+            'type' => $type
+        ];
+
+        return $this->add($name, self::BUTTON, $_option, $modify);
+    }
+
 }

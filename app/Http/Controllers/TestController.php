@@ -29,7 +29,8 @@ class TestController extends Controller
         $userModel->password = '111';
         $userModel->content = 'This is content test <strong>Quach Hoai Nam</strong>';
         $userModel->is_login = 1;
-        $userModel->languages = 'en';
+        $userModel->languages = ['en', 'dk'];
+        $userModel->date = '2020-10-12';
         $form = $formBuilder->create(LoginForm::class,[
             'method' => 'POST',
             'url' => route('test.store'),

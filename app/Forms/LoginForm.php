@@ -13,13 +13,15 @@ class LoginForm extends CForm
             ->addTextInput('password')
             ->addTextarea('content')
             ->addSwitch('is_login', ['on' => 'Yes', 'off' => 'No'])
-            ->addSelect2('languages', [
-                'choices' => ['en' => 'English', 'fr' => 'French'],
+            ->addMultiSelect('languages', [
+                'choices' => ['en' => 'English', 'fr' => 'French', 'vn' => 'Viet Nam', 'dk' => 'Denmark'],
                 'selected' => function($data){
                     return $data;
                 },
                 'empty_value' => '=== Select language ===',
             ])
+            ->add('date', 'date')
+            ->addButton('Send', 'btn-danger')
             ->add('submit', 'submit', ['label' => 'Save form']);
     }
 }
